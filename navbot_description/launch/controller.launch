@@ -1,0 +1,13 @@
+<launch>
+
+<node args="/navbot/joint_state_controller /navbot/navbot_controller" name="controller_spawner" ns="navbot" output="screen" pkg="controller_manager" respawn="false" type="spawner"/>
+<node name="robot_state_publisher" output="screen" pkg="robot_state_publisher" respawn="false" type="robot_state_publisher">
+  <remap from="/joint_states" to="/navbot/joint_states"/>
+</node>
+
+<rosparam file="$(find navbot_description)/config/controller.yaml" command="load"/>
+
+<rosparam file="$(find navbot_description)/config/diff_drive.yaml" command="load"/>
+
+
+</launch>

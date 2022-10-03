@@ -1,0 +1,23 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"back_right_1" [label="back_right_1"];
+"front_right_1" [label="front_right_1"];
+"back_left_1" [label="back_left_1"];
+"front_left_1" [label="front_left_1"];
+"laser_link_v1_1" [label="laser_link_v1_1"];
+"camera_link_v1_1" [label="camera_link_v1_1"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "Rev1" [label="xyz: -0.099572 -0.149882 0.060076 \nrpy: 0 -0 0"]
+"Rev1" -> "back_right_1"
+"base_link" -> "Rev3" [label="xyz: 0.100428 -0.149882 0.060076 \nrpy: 0 -0 0"]
+"Rev3" -> "front_right_1"
+"base_link" -> "Rev4" [label="xyz: -0.099572 0.150118 0.060076 \nrpy: 0 -0 0"]
+"Rev4" -> "back_left_1"
+"base_link" -> "Rev5" [label="xyz: 0.100428 0.150118 0.060076 \nrpy: 0 -0 0"]
+"Rev5" -> "front_left_1"
+"base_link" -> "Rigid8" [label="xyz: 0 0 0.19 \nrpy: 0 -0 0"]
+"Rigid8" -> "laser_link_v1_1"
+"base_link" -> "Rigid9" [label="xyz: 0.150428 0.000118 0.280076 \nrpy: 0 -0 0"]
+"Rigid9" -> "camera_link_v1_1"
+}

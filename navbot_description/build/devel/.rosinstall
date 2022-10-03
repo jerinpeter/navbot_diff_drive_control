@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/jerinpeter/testrobot_ws/src/navbot_description/build/devel/setup.sh
